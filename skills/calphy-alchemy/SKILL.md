@@ -1,6 +1,12 @@
 ---
 name: calphy-alchemy
-description: Run calphy alchemical transformations: `mode: alchemy` to get the free-energy difference between two interatomic potentials for the same structure (upsampling a cheap potential to an expensive one, comparing potentials), and `mode: composition_scaling` to get the free-energy change with composition or the cost of substitutional defects. Use when the question is a free-energy difference between two Hamiltonians or two compositions rather than an absolute free energy.
+description: >-
+  Run calphy alchemical transformations: `mode: alchemy` to get the free-energy
+  difference between two interatomic potentials for the same structure (upsampling
+  a cheap potential to an expensive one, comparing potentials), and `mode:
+  composition_scaling` to get the free-energy change with composition or the cost
+  of substitutional defects. Use when the question is a free-energy difference
+  between two Hamiltonians or two compositions rather than an absolute free energy.
 ---
 
 # Alchemical and composition transformations

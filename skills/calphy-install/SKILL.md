@@ -81,10 +81,11 @@ wrappers).
 
 ## 4. Verify
 
-Run the bundled checker from the skill directory:
+Resolve this skill's directory from the `SKILL.md` path supplied by the agent host,
+then run the bundled checker:
 
 ```bash
-bash ${CLAUDE_SKILL_DIR}/scripts/check_setup.sh
+bash <calphy-install-skill-directory>/scripts/check_setup.sh
 ```
 
 It reports the calphy version, which `lmp` will be used, and which of the five
@@ -110,7 +111,7 @@ Run a tiny solid free-energy calculation. It takes 15 s to 2 min on 4 cores.
 
 ```bash
 mkdir calphy-smoke && cd calphy-smoke
-cp ${CLAUDE_SKILL_DIR}/scripts/smoke_input.yaml input.yaml
+cp <calphy-install-skill-directory>/scripts/smoke_input.yaml input.yaml
 # a Cu EAM potential is needed; the calphy repository ships one at
 # examples/potentials/Cu01.eam.alloy. Adjust pair_coeff if you use another file.
 calphy_kernel -i input.yaml -k 0

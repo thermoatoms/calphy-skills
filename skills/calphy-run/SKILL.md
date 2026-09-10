@@ -1,6 +1,12 @@
 ---
 name: calphy-run
-description: Launch, monitor, and rerun calphy calculations: `calphy_kernel` for one calculation in the foreground, `calphy` to submit every entry through the local, SLURM, or SGE scheduler, hand-written batch scripts, MPI core counts, the pylammpsmpi library backend, the in-process Python API, and reading progress from calphy.log. Use when a valid input.yaml exists and the task is to run it on a laptop or cluster, check on a running job, estimate runtime, or rerun a failed one.
+description: >-
+  Launch, monitor, and rerun calphy calculations: `calphy_kernel` for one
+  calculation in the foreground, `calphy` to submit every entry through the local,
+  SLURM, or SGE scheduler, hand-written batch scripts, MPI core counts, the
+  pylammpsmpi library backend, the in-process Python API, and reading progress from
+  calphy.log. Use when a valid input.yaml exists and the task is to run it on a
+  laptop or cluster, check on a running job, estimate runtime, or rerun a failed one.
 ---
 
 # Run calphy

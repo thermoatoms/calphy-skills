@@ -1,6 +1,12 @@
 ---
 name: calphy-melting-temperature
-description: Compute a melting point with calphy, either automatically with `mode: melting_temperature` or manually from solid and liquid `ts` sweeps whose free-energy curves cross, and decide whether the resulting Tm is trustworthy. Use for melting temperatures of single-component or alloy potentials, melting lines at pressure, and for diagnosing "curves do not cross", "Tm is not within range", or a Tm that disagrees with the literature.
+description: >-
+  Compute a melting point with calphy, either automatically with `mode:
+  melting_temperature` or manually from solid and liquid `ts` sweeps whose
+  free-energy curves cross, and decide whether the resulting Tm is trustworthy.
+  Use for melting temperatures of single-component or alloy potentials, melting
+  lines at pressure, and for diagnosing "curves do not cross", "Tm is not within
+  range", or a Tm that disagrees with the literature.
 ---
 
 # Melting temperature

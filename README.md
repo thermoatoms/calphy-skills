@@ -2,9 +2,10 @@
 
 Agent skills for [calphy](https://calphy.org), the free-energy calculation code
 built on LAMMPS. Each skill is a `SKILL.md` folder in the
-[Agent Skills](https://agentskills.io) format, written for an AI agent that has to
-install calphy, write a valid input, pick the right calculation, run it on a laptop
-or cluster, read the results, and judge whether they can be trusted.
+[Agent Skills](https://agentskills.io) format and works with OpenAI Codex and Claude
+Code. The skills help an AI agent install calphy, write a valid input, pick the
+right calculation, run it on a laptop or cluster, read the results, and judge
+whether they can be trusted.
 
 Written against **calphy 2.1.2**. The keyword table and error messages were taken from
 the calphy source and the test inputs were run against a real LAMMPS binary.
@@ -36,17 +37,42 @@ the calphy source and the test inputs were run against a real LAMMPS binary.
 Skills are then available as `/calphy:calphy-install`, `/calphy:calphy-input-file`, and
 so on, and are also picked up automatically when a request matches a description.
 
-### Plain skill folders
+### OpenAI Codex plugin
 
-Copy any `skills/<name>/` directory into `~/.claude/skills/` (all projects) or
-`.claude/skills/` in a project. Other agents that read the Agent Skills format can
-point at the `skills/` directory directly.
+In Codex CLI, enter `/plugins`, choose **Add Marketplace**, and add
+`https://github.com/thermoatoms/calphy-skills`. Install **calphy**, then start a new
+Codex session. The same marketplace is compatible with both Claude Code and Codex.
+The equivalent terminal commands are:
+
+```bash
+codex plugin marketplace add thermoatoms/calphy-skills
+codex plugin add calphy@calphy-skills
+```
+
+Installed skills can be selected with `/skills` or mentioned as `$calphy-install`,
+`$calphy-input-file`, and so on. Codex can also select them automatically when a
+request matches a skill description. Plugins are available in Codex CLI and the
+ChatGPT desktop app; for the Codex IDE extension, use standalone skill folders.
+
+### Standalone skill folders
+
+Copy any `skills/<name>/` directory into the location used by your agent:
+
+| host | all projects | one project |
+|---|---|---|
+| OpenAI Codex | `~/.agents/skills/` | `.agents/skills/` |
+| Claude Code | `~/.claude/skills/` | `.claude/skills/` |
+
+Codex also supports installing skills from a GitHub repository with
+`$skill-installer`.
 
 ## Layout
 
 ```
+.codex-plugin/plugin.json         Codex compatibility manifest
 .claude-plugin/plugin.json        plugin manifest
-.claude-plugin/marketplace.json   lets `plugin marketplace add` find the plugin
+.claude-plugin/marketplace.json   marketplace for Claude Code and Codex
+plugin.json                       portable Agent Plugins manifest
 skills/<name>/SKILL.md            one skill per folder
 skills/calphy-input-file/references/keywords.md   full keyword table
 skills/calphy-install/scripts/    setup checker and smoke-test input
@@ -60,9 +86,12 @@ On each calphy release:
 1. Diff `calphy/input.py` against `skills/calphy-input-file/references/keywords.md`.
 2. Run `skills/calphy-install/scripts/smoke_input.yaml` and confirm the free energy.
 3. Grep the calphy source for the error strings quoted in `calphy-troubleshoot`.
-4. Bump `version` in both manifests.
+4. Bump `version` in `plugin.json`, `.codex-plugin/plugin.json`, and the Claude
+   plugin and marketplace manifests.
 
-`claude plugin validate .` checks the manifests.
+Validate every skill with Codex's `quick_validate.py` (from
+`skills/.system/skill-creator/scripts/` in the openai/skills repository), validate
+the Codex plugin manifest, and run `claude plugin validate .` before release.
 
 ## License
 

@@ -1,6 +1,12 @@
 ---
 name: calphy-free-energy
-description: Run a calphy `mode: fe` (or `fe-qtb`) calculation to get the absolute Helmholtz or Gibbs free energy of a solid or liquid at one temperature and pressure, and judge whether the number can be trusted. Use for single-point free energies, Einstein-crystal or Uhlenbeck-Ford reference runs, liquid melting cycles, quantum-corrected solid free energies, and for validating report.yaml from an fe run.
+description: >-
+  Run a calphy `mode: fe` (or `fe-qtb`) calculation to get the absolute Helmholtz or
+  Gibbs free energy of a solid or liquid at one temperature and pressure, and judge
+  whether the number can be trusted. Use for single-point free energies,
+  Einstein-crystal or Uhlenbeck-Ford reference runs, liquid melting cycles,
+  quantum-corrected solid free energies, and for validating report.yaml from an fe
+  run.
 ---
 
 # Single-point free energy (`mode: fe`)

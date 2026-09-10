@@ -1,6 +1,12 @@
 ---
 name: calphy-analyse-results
-description: Read and interpret calphy output: report.yaml fields, temperature_sweep.dat and pressure_sweep.dat, forward/backward switching files, logs, and the `calphy.postprocessing` helpers (`read_report`, `gather_results`, `find_transition_temperature`), including how to combine runs, propagate errors, and build a melting line or phase diagram. Use when a calphy run has finished and the task is to extract, check, plot, or aggregate its numbers.
+description: >-
+  Read and interpret calphy output: report.yaml fields, temperature_sweep.dat and
+  pressure_sweep.dat, forward/backward switching files, logs, and the
+  `calphy.postprocessing` helpers (`read_report`, `gather_results`,
+  `find_transition_temperature`), including how to combine runs, propagate errors,
+  and build a melting line or phase diagram. Use when a calphy run has finished and
+  the task is to extract, check, plot, or aggregate its numbers.
 ---
 
 # Analyse calphy results

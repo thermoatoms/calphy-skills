@@ -1,0 +1,40 @@
+{
+  "name": "calphy",
+  "version": "0.2.0",
+  "description": "Agent skills for installing, running, analysing, and troubleshooting calphy free-energy calculations with LAMMPS.",
+  "author": {
+    "name": "Sarath Menon",
+    "email": "sarath.menon@ruhr-uni-bochum.de",
+    "url": "https://github.com/thermoatoms"
+  },
+  "homepage": "https://calphy.org",
+  "repository": "https://github.com/thermoatoms/calphy-skills",
+  "license": "MIT",
+  "keywords": [
+    "calphy",
+    "free-energy",
+    "thermodynamic-integration",
+    "lammps",
+    "molecular-dynamics",
+    "melting-temperature",
+    "phase-diagram"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "calphy",
+    "shortDescription": "Run reliable free-energy calculations with calphy.",
+    "longDescription": "Install calphy, choose a calculation mode, create valid inputs, run calculations locally or on a cluster, analyse results, and troubleshoot LAMMPS failures.",
+    "developerName": "Sarath Menon",
+    "category": "Science",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://calphy.org",
+    "defaultPrompt": [
+      "Help me choose the right calphy calculation mode.",
+      "Create a validated calphy input file for my system.",
+      "Analyse my calphy results and check whether they are trustworthy."
+    ]
+  }
+}

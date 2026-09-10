@@ -1,10 +1,12 @@
 {
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "calphy",
-  "description": "Agent skills for running calphy free-energy calculations with LAMMPS: installation, input files, every calculation mode, cluster submission, result analysis and troubleshooting.",
   "version": "0.2.0",
+  "description": "Agent skills for installing, running, analysing, and troubleshooting calphy free-energy calculations with LAMMPS.",
   "author": {
     "name": "Sarath Menon",
-    "email": "sarath.menon@ruhr-uni-bochum.de"
+    "email": "sarath.menon@ruhr-uni-bochum.de",
+    "url": "https://github.com/thermoatoms"
   },
   "homepage": "https://calphy.org",
   "repository": "https://github.com/thermoatoms/calphy-skills",

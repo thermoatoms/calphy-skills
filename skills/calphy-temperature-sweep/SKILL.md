@@ -1,6 +1,12 @@
 ---
 name: calphy-temperature-sweep
-description: Run calphy reversible scaling (`mode: ts`), direct temperature scaling (`mode: tscale`), or pressure scaling (`mode: pscale`) to get the free energy of one phase as a continuous function of temperature or pressure, and check the sweep for hidden phase transitions. Use for F(T) or G(P) curves, solid-solid transition temperatures, phase-diagram lines, specific heat, and for interpreting temperature_sweep.dat or pressure_sweep.dat.
+description: >-
+  Run calphy reversible scaling (`mode: ts`), direct temperature scaling (`mode:
+  tscale`), or pressure scaling (`mode: pscale`) to get the free energy of one phase
+  as a continuous function of temperature or pressure, and check the sweep for
+  hidden phase transitions. Use for F(T) or G(P) curves, solid-solid transition
+  temperatures, phase-diagram lines, specific heat, and for interpreting
+  temperature_sweep.dat or pressure_sweep.dat.
 ---
 
 # Free energy along T or P
