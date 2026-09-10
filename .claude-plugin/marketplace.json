@@ -1,0 +1,21 @@
+{
+  "name": "calphy-skills",
+  "owner": {
+    "name": "thermoatoms",
+    "url": "https://github.com/thermoatoms"
+  },
+  "metadata": {
+    "description": "Agent skills for the calphy free-energy code",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "calphy",
+      "source": "./",
+      "description": "Install, configure, run and analyse calphy free-energy calculations (fe, ts, tscale, pscale, alchemy, composition_scaling, melting_temperature) with LAMMPS.",
+      "version": "0.1.0",
+      "category": "science",
+      "keywords": ["calphy", "free-energy", "lammps", "thermodynamic-integration"]
+    }
+  ]
+}

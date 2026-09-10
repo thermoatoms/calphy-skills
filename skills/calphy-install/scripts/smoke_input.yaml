@@ -1,0 +1,25 @@
+# Smallest calphy run that exercises the full solid free-energy workflow.
+# fcc Cu, 500 atoms, 500 K, 0 bar. About one to three minutes on 4 cores.
+# Settings are deliberately tiny: expect free_energy near -3.64 eV/atom with
+# run-to-run scatter of a few meV. Not a production setting.
+calculations:
+- element: Cu
+  mass: 63.546
+  lattice: fcc
+  lattice_constant: 3.615
+  repeat: [5, 5, 5]
+  mode: fe
+  reference_phase: solid
+  temperature: 500
+  pressure: 0
+  pair_style: eam/alloy
+  pair_coeff: '* * /ABSOLUTE/PATH/TO/Cu01.eam.alloy Cu'
+  md:
+    timestep: 0.001
+    n_small_steps: 1000
+  n_equilibration_steps: 2500
+  n_switching_steps: 5000
+  n_iterations: 2
+  queue:
+    scheduler: local
+    cores: 4
